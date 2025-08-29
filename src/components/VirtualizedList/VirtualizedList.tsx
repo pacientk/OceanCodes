@@ -18,6 +18,12 @@ interface VirtualizedListProps {
   onRetry?: () => void;
 }
 
+interface VirtualItemProps {
+  virtualItem: { size: number; start: number };
+  className: string;
+  children: ReactNode;
+}
+
 const VirtualizedList: React.FC<VirtualizedListProps> = memo(
   ({
     data,
@@ -129,12 +135,6 @@ const VirtualizedList: React.FC<VirtualizedListProps> = memo(
     );
   }
 );
-
-interface VirtualItemProps {
-  virtualItem: { size: number; start: number };
-  className: string;
-  children: ReactNode;
-}
 
 const VirtualItem = memo<VirtualItemProps>(({ virtualItem, className, children }) => {
   const style = useMemo(
