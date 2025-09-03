@@ -1,6 +1,6 @@
 export const LIST_CONSTANTS = {
   ITEM_HEIGHT: 170,
-  PAGE_SIZE: 50,
+  PAGE_SIZE: 20,
   SEARCH_DEBOUNCE: 400,
 } as const;
 

@@ -46,7 +46,7 @@ function useInfiniteScroll(
     container.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      container.removeEventListener('scroll', handleScroll);
+      // container.removeEventListener('scroll', handleScroll);
 
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
